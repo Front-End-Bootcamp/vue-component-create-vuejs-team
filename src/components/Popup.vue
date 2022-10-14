@@ -1,33 +1,30 @@
 <script setup>
+
 const props = defineProps([
     "text",
     "header",
-    "srcImage",
-    "srcVideo",
-    "heightVideo",
-    "widthVideo",
-    "typeVideo",
     "buttonColor",
-    "buttonText"
+    "buttonText",
+    "showClose",
+    "showAccept"
 ])
+
 </script>
 
 <template>
     <div class="card">
         <div class="card__label">
             <h1 :header="props.header">{{header}}</h1>
-            <a href=""><img :src="props.srcImage"></a>
         </div>
         <div class="card__wrapper">
-            <p :text="props.text">{{text}}</p>
-            <!-- <video :widthVideo="props.widthVideo" :heightVideo="props.heightVideo" autoplay>
-                <source :srcVideo="props.srcVideo" :typeVideo="props.typeVideo">
-            </video> -->
-            <iframe width="560" height="115" src="https://www.youtube.com/embed/0qanF-91aJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<!-- Text , Image , Video vb. eklemeler yapilabilir. -->
+            <slot>
+                {{props.text}}
+            </slot>
         </div>
         <div class="card__footer">
-            <button class="button">Accept</button>
-            <button class="button" :class="[props.buttonColor, props.buttonText]">Close</button>
+            <button v-if="props.showAccept" class="button" :class="[props.buttonColor, props.buttonText]">Accept</button>
+            <button v-if="props.showClose" class="button" :class="[props.buttonColor, props.buttonText]">Close</button>
         </div>
     </div>
 </template>
@@ -37,7 +34,7 @@ const props = defineProps([
 .card {
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
@@ -45,13 +42,13 @@ const props = defineProps([
 
     &__label {
         position: absolute;
-        width: 590px;
-        height: 300px;
+        width: 290px;
+        height: 100px;
         display: flex;
         align-items: stretch;
         justify-content: space-around;
         left: 50%;
-        top: 25%;
+        top: 40%;
         padding: 5px;
         transform: translate(-50%, -50%);
         background-color: antiquewhite;
@@ -59,7 +56,7 @@ const props = defineProps([
 
     &__wrapper {
         position: absolute;
-        width: 590px;
+        width: 290px;
         height: 280px;
         background-color: antiquewhite;
         display: inline-block;
@@ -74,7 +71,7 @@ const props = defineProps([
 
     &__footer {
         position: absolute;
-        width: 590px;
+        width: 290px;
         height: 40px;
         background-color: antiquewhite;
         border-top: 1px dashed brown;
@@ -88,7 +85,6 @@ const props = defineProps([
         margin-top: 30px;
     }
 }
-
 .button {
     // Default
     background-color: #000000;
@@ -103,23 +99,23 @@ const props = defineProps([
     cursor: pointer;
 }
 
-.red{
+.red {
     background-color: red;
 }
 
-.blue{
+.blue {
     background-color: blue;
 }
 
-.green{
+.green {
     background-color: green;
 }
 
-.textBlack{
+.textBlack {
     color: rgb(0, 0, 0);
 }
 
-.textWhite{
+.textWhite {
     color: rgb(255, 255, 255);
 }
 </style>

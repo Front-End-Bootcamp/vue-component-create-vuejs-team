@@ -1,41 +1,77 @@
 <script setup>
 import Popup from './components/Popup.vue';
-
 </script>
 
 <template>
   <div class="container">
-    <Popup class="v1"
-      text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-      header="Bu bir başlık"
-      srcImage="https://picsum.photos/200/300"
-      buttonText="textBlack" 
-      buttonColor="blue">
+    <Popup class="TTA"
+      text="default text"
+      header="Başlık"
+      buttonText="textWhite" 
+      buttonColor="green"
+      :showClose="false"
+      :showAccept="true">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
     </Popup>
 
-    <Popup class="v2"
-      text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-      header="Başlık" 
-      srcImage="https://picsum.photos/200/300" 
-      srcVideo="" 
-      heightVideo="" 
-      widthVideo="" 
-      typeVideo=""
+    <Popup class="TIC"
+      header="Başlık"  
       buttonText="textBlack" 
-      buttonColor="red">
+      buttonColor="red"
+      :showClose="true"
+      :showAccept="false">
+      <img src="/vite.svg">
+    </Popup>
+
+    <Popup class="VTTC"
+      text="default text"
+      header="Başlık" 
+      buttonText="textBlack" 
+      buttonColor="red"
+      :showClose="true"
+      :showAccept="false">
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, adipisci?</p>
+			<video  class="video" autoplay>
+  			<source src="/punisher.mp4" type="video/mp4">
+  		</video>
+      <img src="/vite.svg">
+    </Popup>
+
+    <Popup class="ITTC"
+      text="default"
+      header="Başlık" 
+      buttonText="textBlack" 
+      buttonColor="red"
+      :showClose="true"
+      :showAccept="false">
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, adipisci?</p>
+      
+      <img src="/vite.svg">
     </Popup>
   </div>
 </template>
 
 <style scoped>
-.v1 {
-  width: 600px;
-  left: 350px;
+
+.video {
+    width: 70%;
+    height: 70%;
+ }
+
+ .VTTC{
+  left: 1000px;
+ }
+.ITTC{
+  left: 600px;
+}
+.TTA {
+  left: 180px;
 }
 
-.v2 {
-  width: 600px;
-  left: 1170px;
+.TIC {
+  left: 1360px;
 }
 
 .container {
