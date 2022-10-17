@@ -32,9 +32,10 @@ const props = defineProps([
 
 <style lang="scss" scoped>
 .card {
+	margin: auto;
+	flex: auto;
     position: fixed;
-    left: 50%;
-    top: 40%;
+    top: 25%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
@@ -64,7 +65,7 @@ const props = defineProps([
         top: 65%;
         transform: translate(-50%, -50%);
         padding: 5px;
-        overflow: hidden;
+        
         border-top: 1px dashed brown;
         margin-top: 12px;
     }
