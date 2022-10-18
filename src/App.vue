@@ -74,12 +74,46 @@ const showtitletextimageHandler = () => {
       
       <img src="/vite.svg">
     </Popup>
+    <Popup v-if="showVideo" 
+            buttonText="textBlack" 
+      buttonColor="red"
+      :showClose="true"
+      :showAccept="false"
+        >
+            <video class="video" controls autoplay>
+        <source src="/punisher.mp4" type="">
+      </video>
+        </Popup>
 
+        <Popup v-if="showVideoAccept" 
+            buttonText="textWhite" 
+      buttonColor="green"
+      :showClose="false"
+      :showAccept="true"
+        >
+            <video class="video" controls autoplay>
+        <source src="/punisher.mp4" type="">
+      </video>
+        </Popup>
+
+        <Popup v-if="showvideoacceptClose" 
+            buttonText="textWhite" 
+      buttonColor="green"
+      :showClose="true"
+      :showAccept="true"
+        >
+            <video class="video" controls autoplay>
+        <source src="/punisher.mp4" type="">
+      </video>
+        </Popup>
 
     <button @click="showvideoimageHandler">Show Video+Image+Text Popup</button>
     <button @click="showtexttitleHandler">Show Text+Title Popup</button>
     <button @click="showtitleimageHandler">Show Title+Image Popup</button>
     <button @click="showtitletextimageHandler">Show Title+Text+Image</button>
+		<button @click="showvideoHandler">Show Video Close Popup</button>
+    <button @click="showvideoacceptHandler">Show Video Accept Popup</button>
+    <button @click="showvideoacceptcloseHandler">Show Video Accept Close Popup</button>
 
   </div>
 
