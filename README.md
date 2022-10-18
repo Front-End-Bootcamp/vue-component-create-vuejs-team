@@ -1,46 +1,13 @@
-# Project
+# Popups Challenge
 
-Autocomplete 
+## Team
 
-- Search
+<a href="https://github.com/enqinsel"><b>--> Engin İnsel <--</b></a> <br>
+<a href="https://github.com/devisasari"><b>--> İsa Sarı <--</b></a><br>
+<a href="https://github.com/esrakocakk"><b>--> Esra Koçak <--</b></a> <br>
+---
+<a href="https://popupschallenge.web.app/"><b>--> LIVE <--</b></a>
+	
 
-- Complete 
+![image](https://user-images.githubusercontent.com/76450122/196543048-c5405a3b-7a6c-4427-aa31-2a513d88bf2a.png)
 
-- Optional Request
-
-Popup
-
-- Video
-
-- Image
-
-- Title +Text
-
-- Accept / Close 
-
-Cookie
-
-- Title
-
-- Text
-
-- Accept / Reject
-
-Notification
-
-- New Notification Push
-
-- Icon Change
-
-- Color Change
-
-
-
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8837419&assignment_repo_type=AssignmentRepo)
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
