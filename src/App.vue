@@ -11,6 +11,8 @@ const showVideoAccept = ref(false)
 const showvideoacceptClose = ref(false)
 
 
+
+// Functions
 const showvideoimageHandler = () => {
 	showvideoImage.value = true
 }
@@ -44,6 +46,8 @@ const showvideoacceptcloseHandler = () => {
 
 
 <template>
+	<!-- Popups Begin -->
+
 	<div class="container">
 		<Popup
 		 v-if="showtextTitle"
@@ -124,6 +128,9 @@ const showvideoacceptcloseHandler = () => {
 				<source src="/punisher.mp4" type="">
 			</video>
 		</Popup>
+<!-- Popups End -->
+
+		<!-- Butons Begin -->
 
 		<button @click="showvideoimageHandler">Show Video+Image+Text Popup</button>
 		<button @click="showtexttitleHandler">Show Text+Title Popup</button>
@@ -133,6 +140,7 @@ const showvideoacceptcloseHandler = () => {
 		<button @click="showvideoacceptHandler">Show Video Accept Popup</button>
 		<button @click="showvideoacceptcloseHandler">Show Video Accept Close Popup</button>
 
+		<!-- Butons End -->
 	</div>
 
 
