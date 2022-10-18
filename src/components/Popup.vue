@@ -41,5 +41,64 @@ const closeHandler = () => {
 	</div>
 
 </template>
+<style  scoped>
 
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.textBlack {
+    color: rgb(0, 0, 0);
+}
+
+.textWhite {
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(194, 141, 60, 0.5);
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: rgb(237, 252, 196);
+    background: linear-gradient(0deg, rgba(237, 252, 196, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    border: 1px solid red;
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
 
