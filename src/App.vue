@@ -39,6 +39,7 @@ const showvideoacceptHandler = () => {
 const showvideoacceptcloseHandler = () => {
 	showvideoacceptClose.value = true
 }
+
 </script>
 
 
@@ -93,6 +94,7 @@ const showvideoacceptcloseHandler = () => {
 
 			<img src="/vite.svg">
 		</Popup>
+
 		<Popup v-if="showVideo" 
 			buttonText="textBlack" 
 			buttonColor="red" 
@@ -127,7 +129,6 @@ const showvideoacceptcloseHandler = () => {
 		<button @click="showtexttitleHandler">Show Text+Title Popup</button>
 		<button @click="showtitleimageHandler">Show Title+Image Popup</button>
 		<button @click="showtitletextimageHandler">Show Title+Text+Image</button>
-
 		<button @click="showvideoHandler">Show Video Close Popup</button>
 		<button @click="showvideoacceptHandler">Show Video Accept Popup</button>
 		<button @click="showvideoacceptcloseHandler">Show Video Accept Close Popup</button>
@@ -169,7 +170,7 @@ button {
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
-	top: 40px;
+	top: 150px;
 }
 
 button:focus {
